@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Content from "./components/Content";
+import Articles from "./components/Articles";
+import DetailPage from "./components/DetailPage";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ErrorPage from "./components/ErrorPage";
+import RandomRating from "./components/RandomRating";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <RandomRating />
+      <div style={{ marginTop: "40px" }}>
+        <Switch>
+          <Route exact path="/" component={Content} />
+          <Route exact path="/articles" component={Articles} />
+          <Route exact path="/articles/:id" component={DetailPage} />
+          <Route exact component={ErrorPage} />
+        </Switch>
+      </div>
+      <Footer />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

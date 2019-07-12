@@ -1,0 +1,135 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600");
+
+a {
+  text-decoration: none;
+  color: #777;
+}
+a:hover,
+a:active,
+a:focus {
+  outline: 0;
+  text-decoration: none;
+  color: #999;
+}
+.bg-red {
+  background-color: #f75353;
+}
+.bg-green {
+  background-color: #51d466;
+}
+.bg-lblue {
+  background-color: #32c8de;
+}
+.bg-purple {
+  background-color: rebeccapurple;
+}
+
+.menu {
+  margin: 10px 30px 0 30px;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../../assets/Images/header2.jpg);
+  background-size: 100% 100%;
+  border-radius: 10px;
+  img {
+    height: 50px;
+    width: 50px;
+    display: block;
+    float: right;
+    margin-right: 10px;
+  }
+  ul {
+    margin-bottom: 0;
+  }
+  ul li {
+    display: block;
+    width: 126px;
+    float: left;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    margin-right: 25px;
+    a {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      color: #fff;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 300;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset;
+      .main-text {
+        position: relative;
+        z-index: 5;
+        text-transform: uppercase;
+      }
+      .link-hover {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        display: inline;
+        width: 100%;
+        height: 0%;
+        background: rgba(0, 0, 0, 0.05);
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+      }
+    }
+    a:hover .link-hover {
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .menu ul li a {
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+    margin: 0;
+  }
+  .menu {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .menu ul li {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu ul li {
+    width: 33.3%;
+  }
+  .menu ul li a {
+    border-bottom: 0;
+  }
+}
+
+.height {
+  width: 100%;
+  height: 50px;
+}
+
+.main-text {
+  font-size: 20pt;
+}
+
+// #rel a:active {
+//   .footer {
+//     position: relative;
+//   }
+// }
