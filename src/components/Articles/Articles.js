@@ -54,6 +54,7 @@ class Articles extends React.Component {
                   id={article.id}
                   description={article.description}
                   img={article.img}
+                  
                 />
               ))}
             </div>
@@ -64,6 +65,7 @@ class Articles extends React.Component {
           postsPerPage={postsPerPage}
           totalPosts={articles.length}
           handler={this.handler}
+          
         />
       </div>
     );

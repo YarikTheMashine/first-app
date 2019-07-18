@@ -30,6 +30,7 @@ class Auth extends React.Component {
 
   handleChange = event => {
     const target = event.target;
+
     const value = target.value;
     const name = target.name;
 

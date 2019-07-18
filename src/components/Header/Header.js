@@ -2,8 +2,11 @@ import React from "react";
 import "./header.scss";
 import { Link } from "react-router-dom";
 import image from "../../assets/Images/logo.jpg";
+import Cookies from "universal-cookie";
 
-const Header = ({ isLogin, loginToggler }) => {
+const cookies = new Cookies();
+
+const Header = ({ loginToggler }) => {
   return (
     <div>
       <header className="menu">
@@ -15,7 +18,7 @@ const Header = ({ isLogin, loginToggler }) => {
             </Link>
           </li>
           <li>
-            <Link className="bg-red height" to="/">
+            <Link className="bg-red height" to="/contact_us">
               <span className="link-hover" />
               <span className="main-text">About</span>
             </Link>
@@ -27,17 +30,23 @@ const Header = ({ isLogin, loginToggler }) => {
             </Link>
           </li>
           <li>
-            {isLogin === true ? (
-              <Link className="bg-purple height" to="/login" 
-              onClick={loginToggler}>
+            {cookies.get("isLogin") ? (
+              <Link
+                className="bg-purple height"
+                to="/login"
+                onClick={loginToggler}
+              >
                 <span className="link-hover" />
-              <span className="main-text">Log Out</span>
+                <span className="main-text">Log Out</span>
               </Link>
             ) : (
-              <Link className="bg-purple height" to="/login" 
-              onClick={loginToggler}>
+              <Link
+                className="bg-purple height"
+                to="/login"
+                onClick={loginToggler}
+              >
                 <span className="link-hover" />
-              <span className="main-text">Login</span>
+                <span className="main-text">Login</span>
               </Link>
             )}
           </li>

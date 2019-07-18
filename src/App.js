@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import Auth from "./components/Auth";
 import Cookies from "universal-cookie";
+import About from "./components/About";
 
 const cookies = new Cookies();
 
@@ -30,7 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Header isLogin={this.state.isLogin} loginToggler={this.loginHandler} />
+        <Header loginToggler={this.loginHandler} />
         <div style={{ marginTop: "40px" }}>
           <Switch>
             <Route exact path="/" component={Content} />
@@ -43,6 +44,7 @@ class App extends React.Component {
             />
             <Route exact path="/articles" component={Articles} />
             <Route exact path="/articles/:id" component={DetailPage} />
+            <Route exact path="/contact_us" component={About} />
             <Route exact component={ErrorPage} />
           </Switch>
         </div>

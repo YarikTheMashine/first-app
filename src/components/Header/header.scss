@@ -31,6 +31,7 @@ a:focus {
   padding: 10px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../../assets/Images/header2.jpg);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6);
   background-size: 100% 100%;
   border-radius: 10px;
   img {
@@ -42,6 +43,9 @@ a:focus {
   }
   ul {
     margin-bottom: 0;
+    .rounded-circle {
+      box-shadow: 0 0 12px rgba(0, 0, 0, 1);
+    }
   }
   ul li {
     display: block;
@@ -90,35 +94,6 @@ a:focus {
   }
 }
 
-@media (max-width: 400px) {
-  .menu ul li a {
-    font-size: 24px;
-    font-weight: 400;
-  }
-}
-
-@media (max-width: 767px) {
-  .menu {
-    margin: 0;
-  }
-  .menu {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  .menu ul li {
-    width: 50% !important;
-  }
-}
-
-@media (max-width: 991px) {
-  .menu ul li {
-    width: 33.3%;
-  }
-  .menu ul li a {
-    border-bottom: 0;
-  }
-}
-
 .height {
   width: 100%;
   height: 50px;
@@ -127,9 +102,3 @@ a:focus {
 .main-text {
   font-size: 20pt;
 }
-
-// #rel a:active {
-//   .footer {
-//     position: relative;
-//   }
-// }
