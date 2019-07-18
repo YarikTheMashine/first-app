@@ -18,7 +18,7 @@ const Header = ({ loginToggler }) => {
             </Link>
           </li>
           <li>
-            <Link className="bg-red height" to="/contact_us">
+            <Link className="bg-red height" to="/about">
               <span className="link-hover" />
               <span className="main-text">About</span>
             </Link>

@@ -44,7 +44,7 @@ class App extends React.Component {
             />
             <Route exact path="/articles" component={Articles} />
             <Route exact path="/articles/:id" component={DetailPage} />
-            <Route exact path="/contact_us" component={About} />
+            <Route exact path="/about" component={About} />
             <Route exact component={ErrorPage} />
           </Switch>
         </div>

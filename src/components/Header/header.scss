@@ -45,6 +45,8 @@ a:focus {
     margin-bottom: 0;
     .rounded-circle {
       box-shadow: 0 0 12px rgba(0, 0, 0, 1);
+      animation: 16s linear 0s normal none infinite running rounded-circle;
+      -webkit-animation: 16s linear 0s normal none infinite running rounded-circle;
     }
   }
   ul li {
@@ -101,4 +103,21 @@ a:focus {
 
 .main-text {
   font-size: 20pt;
+}
+
+@keyframes rounded-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rounded-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
