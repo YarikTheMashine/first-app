@@ -9,23 +9,47 @@ import DetailPage from "./components/DetailPage";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import Auth from "./components/Auth";
+import Cookies from "universal-cookie";
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <Header />
-      <div style={{ marginTop: "40px" }}>
-        <Switch>
-          <Route onClick={Header.forceUpdate} exact path="/" component={Content} />
-          <Route onClick={Header.forceUpdate} exact path="/login" component={Auth} />
-          <Route onClick={Header.forceUpdate} exact path="/articles" component={Articles} />
-          <Route exact path="/articles/:id" component={DetailPage} />
-          <Route exact component={ErrorPage} />
-        </Switch>
-      </div>
-      <Footer />
-    </BrowserRouter>
-  );
-};
+const cookies = new Cookies();
+
+class App extends React.Component {
+  state = {
+    isLogin: false
+  };
+
+  loginHandler = () => {
+    if (this.state.isLogin) {
+      cookies.remove("isLogin");
+    }
+    this.setState(state => ({
+      isLogin: !state.isLogin
+    }));
+  };
+
+  render() {
+    return (
+      <BrowserRouter>
+        <Header isLogin={this.state.isLogin} loginToggler={this.loginHandler} />
+        <div style={{ marginTop: "40px" }}>
+          <Switch>
+            <Route exact path="/" component={Content} />
+            <Route
+              path="/login"
+              component={props => (
+                <Auth {...props} loginHandler={this.loginHandler} />
+              )}
+              exact
+            />
+            <Route exact path="/articles" component={Articles} />
+            <Route exact path="/articles/:id" component={DetailPage} />
+            <Route exact component={ErrorPage} />
+          </Switch>
+        </div>
+        <Footer />
+      </BrowserRouter>
+    );
+  }
+}
 
 export default App;

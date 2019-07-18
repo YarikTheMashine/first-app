@@ -59,7 +59,7 @@ class Articles extends React.Component {
             </div>
           </div>
         )}
-        {!isLoading && <Loader />}
+        {isLoading && <Loader />}
         <Pagination
           postsPerPage={postsPerPage}
           totalPosts={articles.length}

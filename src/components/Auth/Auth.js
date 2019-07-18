@@ -50,6 +50,7 @@ class Auth extends React.Component {
           "isLogin",
           "Congratulation,_" + state.username + "_is_loggined_now"
         );
+        props.loginHandler();
         props.history.push("/");
       }
     });
