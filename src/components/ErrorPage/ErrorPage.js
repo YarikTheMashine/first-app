@@ -7,7 +7,7 @@ const ErrorPage = () => {
     <div id="errorPage">
       <img src={image} />
       <br />
-      <p id="errorLabel" >{`404       Page not found :(`}</p>
+      <p id="errorLabel">404 Page not found :(</p>
     </div>
   );
 };

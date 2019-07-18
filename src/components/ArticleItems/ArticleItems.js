@@ -1,7 +1,7 @@
 import React from "react";
 import "./articleItems.scss";
 import { Link } from "react-router-dom";
-import RandomRating from "../RandomRating/RandomRating";
+import WithRandomRating from "../WithRandomRating";
 
 const ArticleItems = ({ title, id, description, img, randomValue }) => {
   return (
@@ -23,4 +23,4 @@ const ArticleItems = ({ title, id, description, img, randomValue }) => {
   );
 };
 
-export default RandomRating(ArticleItems);
+export default WithRandomRating(ArticleItems);

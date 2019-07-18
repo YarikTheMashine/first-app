@@ -4,6 +4,7 @@ import { getArticles } from "../../api/articles";
 import ArticleItems from "../ArticleItems";
 import Loader from "../Loader";
 import Pagination from "../Pagination";
+import WithOnlineRequire from "../WithOnlineRequire";
 
 class Articles extends React.Component {
   state = {
@@ -16,7 +17,6 @@ class Articles extends React.Component {
   componentDidMount() {
     getArticles()
       .then(res => {
-        // console.log(res);
         this.setState({ articles: res, isLoading: false });
       })
       .catch(rej => {
@@ -38,8 +38,6 @@ class Articles extends React.Component {
     const indexOfLastPost = this.state.currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = articles.slice(indexOfFirstPost, indexOfLastPost);
-    console.log(this.state.currentPage);
-    // const newArr = [];
     return (
       <div>
         <Pagination
@@ -61,7 +59,7 @@ class Articles extends React.Component {
             </div>
           </div>
         )}
-        {isLoading && <Loader />}
+        {!isLoading && <Loader />}
         <Pagination
           postsPerPage={postsPerPage}
           totalPosts={articles.length}
@@ -72,4 +70,4 @@ class Articles extends React.Component {
   }
 }
 
-export default Articles;
+export default WithOnlineRequire(Articles);

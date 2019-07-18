@@ -1,7 +1,7 @@
 import React from "react";
 import "./detailPage.scss";
 import { getArticleId } from "../../api/articles";
-import { Link } from "react-router-dom";
+import WithOnlineRequire from "../WithOnlineRequire";
 
 class DetailPage extends React.Component {
   state = {
@@ -24,39 +24,31 @@ class DetailPage extends React.Component {
   }
 
   render() {
-    const { article, isLoading } = this.state;
+    const { article } = this.state;
     console.log(this.props);
     console.log(article);
     return (
-      <div>
-        <div className="container">
-          <div id="detail" className="row">
-            <div>
-              <img
-                id="imageDetail"
-                src={article.img}
-                data-holder-rendered="true"
-                height="280px"
-                width="400px"
-              />
-            </div>
-            <div className="col-md-7 order-md-2">
-              <h2>{article.title}</h2>
-              <p id="fontArticle">{article.description}</p>
-            </div>
+      <div className="container">
+        <div id="detail" className="row">
+          <div>
+            <img
+              id="imageDetail"
+              src={article.img}
+              data-holder-rendered="true"
+              height="280px"
+              width="400px"
+            />
           </div>
-        </div>
-        <div id="buttons">
-          <Link className="btn btn-primary" to={`/articles/${article.id + 1}`}>
-            Next
-          </Link>
-          <Link className="btn btn-primary" to={`/articles/${article.id - 1}`}>
-            Previous
-          </Link>
+          <div className="col-md-7 order-md-2">
+            <h2>{article.title}</h2>
+            <p id="fontArticle">
+              {article.description}
+            </p>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default DetailPage;
+export default WithOnlineRequire(DetailPage);

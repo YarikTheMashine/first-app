@@ -8,17 +8,17 @@ import Articles from "./components/Articles";
 import DetailPage from "./components/DetailPage";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
-import RandomRating from "./components/RandomRating";
+import Auth from "./components/Auth";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <RandomRating />
       <div style={{ marginTop: "40px" }}>
         <Switch>
-          <Route exact path="/" component={Content} />
-          <Route exact path="/articles" component={Articles} />
+          <Route onClick={Header.forceUpdate} exact path="/" component={Content} />
+          <Route onClick={Header.forceUpdate} exact path="/login" component={Auth} />
+          <Route onClick={Header.forceUpdate} exact path="/articles" component={Articles} />
           <Route exact path="/articles/:id" component={DetailPage} />
           <Route exact component={ErrorPage} />
         </Switch>

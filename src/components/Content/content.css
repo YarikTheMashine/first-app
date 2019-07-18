@@ -1,20 +1,14 @@
 .col-xs-1 {
-  margin-top: 70px;
-  position: relative;
-  /* height: 61.1vh; */
-  /* height: 73.6vh; */
-  display: block;
-  border-radius: 20px;
-  font-family: Stalemate, sans-serif;
-  font-size: 70px;
-  color: #ffff00;
+    margin-top: 70px;
+    position: relative;
+    height: 61.1vh;
+    display: block;
+    border-radius: 20px;
+    font-family: Stalemate, sans-serif;
+    font-size: 70px;
+    color: #FFFF00;
 }
 @font-face {
-  font-family: Stalemate;
-  src: url("./Stalemate.ttf");
-}
-
-#content img {
-  display: block;
-  margin: 15px auto;
-}
+    font-family: Stalemate;
+    src: url("./Stalemate.ttf");
+};

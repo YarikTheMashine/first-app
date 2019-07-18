@@ -4,6 +4,7 @@
     background: url(../../assets/Images/content3.jpg);
     background-size: 100% 100%;
     border-radius: 15px;
+    // color: black;
     img {
       box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
       border-radius: 5px;
@@ -30,10 +31,4 @@
 #fontArticle {
   font-size: 1.15rem;
   font-weight: 400;
-}
-
-#buttons {
-  // display: inline;
-  align-items: center;
-  margin-bottom: 78px;
 }

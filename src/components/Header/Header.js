@@ -2,8 +2,15 @@ import React from "react";
 import "./header.scss";
 import { Link } from "react-router-dom";
 import image from "../../assets/Images/logo.jpg";
+import Cookies from "universal-cookie";
+
+const cookies = new Cookies();
 
 const Header = () => {
+  let loginButton = "";
+  if (cookies.get("isLogin")) {
+    loginButton = "Log Out";
+  } else loginButton = "Log In";
   return (
     <div>
       <header className="menu">
@@ -15,7 +22,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link className="bg-red height" to="">
+            <Link className="bg-red height" to="/">
               <span className="link-hover" />
               <span className="main-text">About</span>
             </Link>
@@ -27,9 +34,9 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link className="bg-purple height" href="/">
+            <Link className="bg-purple height" to="/login">
               <span className="link-hover" />
-              <span className="main-text">Profile</span>
+              <span className="main-text">{loginButton}</span>
             </Link>
           </li>
           <div>

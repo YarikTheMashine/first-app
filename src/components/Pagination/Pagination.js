@@ -8,7 +8,7 @@ const Pagination = ({ handler, postsPerPage, totalPosts }) => {
   }
 
   return (
-    <div className="row justify-content-center align-items-center" style={{ marginRight: 0 }}>
+    <div className="row justify-content-center align-items-center" style={{margin: 0}}>
       <nav>
         <ul className="pagination text-center">
           {pageNumbers.map(number => (
