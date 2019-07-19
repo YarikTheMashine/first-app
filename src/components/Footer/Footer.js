@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <ul className="mainLinks">
           <li>
-            <Link className="text-white" to="/">
+            <Link className="text-white" to="/welcome">
               Home
             </Link>
           </li>

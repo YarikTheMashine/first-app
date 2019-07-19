@@ -12,7 +12,7 @@ const Header = ({ loginToggler }) => {
       <header className="menu">
         <ul className="height">
           <li>
-            <Link className="bg-lblue height" to="/">
+            <Link className="bg-lblue height" to="/welcome">
               <span className="link-hover" />
               <span className="main-text">Home</span>
             </Link>
