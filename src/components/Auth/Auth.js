@@ -13,8 +13,8 @@ const authData = [
     password: "123456"
   },
   {
-    username: "andriy",
-    password: "123456"
+    username: "admin",
+    password: "1234"
   }
 ];
 

@@ -1,7 +1,7 @@
 .col-xs-1 {
     margin-top: 70px;
     position: relative;
-    height: 61.1vh;
+    min-height: 713px;
     display: block;
     border-radius: 20px;
     font-family: Stalemate, sans-serif;

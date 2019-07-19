@@ -19,9 +19,6 @@ axios.paramsSerializer = params =>
 client.interceptors.response.use(
   response => response.data,
   error => console.log(error)
-  // new Promise((resolve, reject) => {
-  //   reject(error.response.data);
-  // })
 );
 
 export default client;
