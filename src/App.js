@@ -34,7 +34,7 @@ class App extends React.Component {
         <Header loginToggler={this.loginHandler} />
         <div style={{ marginTop: "40px" }}>
           <Switch>
-            <Route exact path="/first-app" component={Content} />
+            <Route exact path="/" component={Content} />
             <Route
               path="/login"
               component={props => (
