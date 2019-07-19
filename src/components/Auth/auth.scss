@@ -1,5 +1,19 @@
 #authForm {
   min-height: 683px;
+
+  #help {
+    max-width: 150px;
+    text-align: center;
+    margin: 10px auto 0;
+    background-color: gainsboro;
+    border: 3px ridge hotpink;
+    p {
+      margin-bottom: 0;
+      font-size: 20px;
+      text-decoration: underline;
+    }
+  }
+
   .wrapper {
     margin-top: 80px;
     margin-bottom: 20px;

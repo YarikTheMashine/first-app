@@ -52,7 +52,7 @@ class Auth extends React.Component {
           "Congratulation,_" + state.username + "_is_loggined_now"
         );
         props.loginHandler();
-        props.history.push("/first-app");
+        props.history.push("/");
       }
     });
   };
@@ -95,6 +95,12 @@ class Auth extends React.Component {
               Login
             </button>
           </form>
+          <div id="help">
+            <p>for test</p>
+            login: admin
+            <br />
+            password: 1234
+          </div>
         </div>
       </div>
     );
