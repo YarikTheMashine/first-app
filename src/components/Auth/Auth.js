@@ -52,7 +52,7 @@ class Auth extends React.Component {
           "Congratulation,_" + state.username + "_is_loggined_now"
         );
         props.loginHandler();
-        props.history.push("/");
+        props.history.push("/first-app");
       }
     });
   };

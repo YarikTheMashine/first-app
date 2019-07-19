@@ -1,29 +1,30 @@
 import React from "react";
 import "./footer.scss";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer">
       <div className="container">
         <ul className="mainLinks">
           <li>
-            <a className="text-white" href="#">
+            <Link className="text-white" to="/first-app">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="text-white" href="#">
+            <Link className="text-white" to="/about">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="text-white" href="#">
+            <Link className="text-white" to="/articles">
               News
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="text-white" href="#" target="_blank">
+            <Link className="text-white" to="/login">
               Profile
-            </a>
+            </Link>
           </li>
         </ul>
         <ul className="socialIcons">
@@ -33,12 +34,20 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a className="telegram" href="https://t.me/l28ve980" target="_blank">
+            <a
+              className="telegram"
+              href="https://t.me/l28ve980"
+              target="_blank"
+            >
               <i className="fa fa-telegram" />
             </a>
           </li>
           <li>
-            <a className="instagram" href="https://www.instagram.com/captain.wex/" target="_blank">
+            <a
+              className="instagram"
+              href="https://www.instagram.com/captain.wex/"
+              target="_blank"
+            >
               <i className="fa fa-instagram" />
             </a>
           </li>
@@ -49,11 +58,15 @@ const Footer = () => {
           </li>
         </ul>
         <p className="text-white">
-          © Copyright 2019 {" "}
-          <a id="link" href="https://github.com/YarikTheMashine" target="_blank">
-          Yaroslav Baiduk 
-          </a>
-          {" "}- All Rights Reserved
+          © Copyright 2019{" "}
+          <a
+            id="link"
+            href="https://github.com/YarikTheMashine"
+            target="_blank"
+          >
+            Yaroslav Baiduk
+          </a>{" "}
+          - All Rights Reserved
         </p>
       </div>
     </div>
